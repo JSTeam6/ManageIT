@@ -10,7 +10,7 @@
             <img id="logo" src="resources/images/logo.png" alt="Logo">
             <div id="login">Login</div>
         </header>
-        <main>Callendar</main>
+        <main>Calendar</main>
         <section id="tasks">Tasks<br />
             <button id="createTask">Create Task</button>
             <form id="createTaskForm">
@@ -34,8 +34,8 @@
                     <option value="unassigned">Unassigned</option>
                     <option value="reassigned">Reassigned</option>
                 </select><br />
-                Dead Line:
-                <input type="date" name="deadLine" required><br />
+                Deadline:
+                <input type="date" name="deadline" required><br />
                 Comment:
                 <textarea name="taskComment" cols="20" rows="3"></textarea><br />
                 <input type="submit" value="Create">
@@ -63,8 +63,9 @@
             </form>
         </section>
         <section id="log">Log<br /></section>
-
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script-->
         <script src="resources/animations.js"></script>
         <script src="resources/modelFactory.js"></script>
         <script src="resources/database.js"></script>

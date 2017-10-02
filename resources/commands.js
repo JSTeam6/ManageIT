@@ -35,6 +35,8 @@ const commandsFunc = function (modelFactory, database) {
 
             const task = modelFactory.createTask(taskName, taskPriority, taskDifficulty, taskStatus, deadLine, taskComment, assignedEmployees)
             database.tasks.push(task)
+
+            //$task.draggable({revert: "invalid"})
             
             let successMessage = `Task with ID: ${database.tasks.length - 1} and Name: ${task.taskName} was created.`
 

@@ -29,6 +29,9 @@ main{
     grid-column: 1;
     grid-row: 2 / 7;
 }
+.draggable, .droppable{
+    height: 15px;
+}
 #employees{
     grid-column: 6;
     grid-row: 2 / 7;
