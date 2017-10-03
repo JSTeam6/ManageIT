@@ -11,3 +11,12 @@ $(document).ready(function () {
         })
     })
 })
+
+$(".droppable").click(function(){
+    $(".draggable").slideToogle();
+});
+
+
+
+
+

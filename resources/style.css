@@ -32,6 +32,9 @@ main{
 .draggable, .droppable{
     height: 15px;
 }
+.droppable .draggable{
+    display: none;
+}
 #employees{
     grid-column: 6;
     grid-row: 2 / 7;

@@ -20,7 +20,6 @@ $(function () {
             }).droppable({accept: ".draggable"});
             $employee.appendTo("#employees");
             //makes it droppable
-            //$( ".droppable" ).droppable({accept: ".draggable"});
             $('.droppable').droppable({ drop: Drop });
             
             function Drop(event, ui) {
@@ -29,9 +28,16 @@ $(function () {
               let employee = container.database.employees.find(x => (x.name == `${droppableId}`))
               let task = container.database.tasks.find(x => (x.taskName == `${draggableId}`))
               employee.assignedTasks.push(task);
-              task.taskStatus= "Assigned";
+              task.taskStatus= "Ongoing";
               task.assignedEmployees.push(employee);
-            }
+              ui.draggable.appendTo(`#${droppableId}`)
+              $(`#${droppableId}`).click(function () {
+                $(".draggable").animate({
+                    height: 'toggle'
+                })
+            })
+
+        }
 
         } else if (commandResult[1].hasOwnProperty('taskName')) {
             let $task = $('<div/>', {
@@ -43,8 +49,11 @@ $(function () {
             //makes it draggable
             $( ".draggable" ).draggable({revert:"invalid", helper:"clone"});
         }
+
+        
         
         //$(".draggable")[0].reset()
+
         $(`#${formID}`)[0].reset()
 
         return false // avoid to execute the actual submit of the form and page refresh
