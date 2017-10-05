@@ -1,0 +1,15 @@
+#month>div {
+    float: left;
+    height: 200px;
+    width: 100px;
+}
+
+#year {
+    font-size: 28;
+    text-align: center;
+}
+
+#month {
+    font-size: 20;
+    text-align: center;
+}

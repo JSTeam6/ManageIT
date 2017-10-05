@@ -7,7 +7,47 @@ function calendarFunc() {
             calendar.append('<div id="year">' + currentDate.getFullYear())
             break
         case 1:
-            calendar.append('<div id="month">' + currentDate.getMonth())
+            const currentMonth = currentDate.getMonth()
+            let monthToString
+            switch (currentMonth) {
+                case 0:
+                    monthToString = "January"
+                    break
+                case 1:
+                    monthToString = "February"
+                    break
+                case 2:
+                    monthToString = "March"
+                    break
+                case 3:
+                    monthToString = "April"
+                    break
+                case 4:
+                    monthToString = "May"
+                    break
+                case 5:
+                    monthToString = "June"
+                    break
+                case 6:
+                    monthToString = "July"
+                    break
+                case 7:
+                    monthToString = "August"
+                    break
+                case 8:
+                    monthToString = "September"
+                    break
+                case 9:
+                    monthToString = "October"
+                    break
+                case 10:
+                    monthToString = "November"
+                    break
+                case 11:
+                    monthToString = "December"
+                    break
+            }
+            calendar.append('<div id="month">' + monthToString + '<br>')
             let month = currentDate.getMonth()
             let year = currentDate.getFullYear()
             let numDays = 31
@@ -41,6 +81,42 @@ function calendarFunc() {
 
             let firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1)
             let dayOfWeek = firstDayOfMonth.getDay()
+
+            switch (dayOfWeek) {
+                case 0:
+                    monday.append('<div class="empty">' + '<br>')
+                    tuesday.append('<div class="empty">' + '<br>')
+                    wednesday.append('<div class="empty">' + '<br>')
+                    thursday.append('<div class="empty">' + '<br>')
+                    friday.append('<div class="empty">' + '<br>')
+                    saturday.append('<div class="empty">' + '<br>')
+                    break
+                case 2:
+                    monday.append('<div class="empty">' + '<br>')
+                    break
+                case 3:
+                    monday.append('<div class="empty">' + '<br>')
+                    tuesday.append('<div class="empty">' + '<br>')
+                    break
+                case 4:
+                    monday.append('<div class="empty">' + '<br>')
+                    tuesday.append('<div class="empty">' + '<br>')
+                    wednesday.append('<div class="empty">' + '<br>')
+                    break
+                case 5:
+                    monday.append('<div class="empty">' + '<br>')
+                    tuesday.append('<div class="empty">' + '<br>')
+                    wednesday.append('<div class="empty">' + '<br>')
+                    thursday.append('<div class="empty">' + '<br>')
+                    break
+                case 6:
+                    monday.append('<div class="empty">' + '<br>')
+                    tuesday.append('<div class="empty">' + '<br>')
+                    wednesday.append('<div class="empty">' + '<br>')
+                    thursday.append('<div class="empty">' + '<br>')
+                    friday.append('<div class="empty">' + '<br>')
+                    break
+            }
 
             for (let i = 1; i <= numDays; i++) {
 
