@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const calendarDiv = $('#calendar')
     const currentDate = new Date()
 
@@ -6,46 +6,11 @@ $(document).ready(function() {
     const yearDiv = $('#year')
 
     const currentMonth = currentDate.getMonth()
-    let monthToString
 
-    switch (currentMonth) {
-        case 0:
-            monthToString = "January"
-            break
-        case 1:
-            monthToString = "February"
-            break
-        case 2:
-            monthToString = "March"
-            break
-        case 3:
-            monthToString = "April"
-            break
-        case 4:
-            monthToString = "May"
-            break
-        case 5:
-            monthToString = "June"
-            break
-        case 6:
-            monthToString = "July"
-            break
-        case 7:
-            monthToString = "August"
-            break
-        case 8:
-            monthToString = "September"
-            break
-        case 9:
-            monthToString = "October"
-            break
-        case 10:
-            monthToString = "November"
-            break
-        case 11:
-            monthToString = "December"
-            break
-    }
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August",
+        "September", "October", "November", "December"]
+    let monthToString = months[currentMonth]
+
     yearDiv.append('<div id="month">' + monthToString + '<br>')
     let month = currentDate.getMonth()
     let year = currentDate.getFullYear()
@@ -187,4 +152,4 @@ $(document).ready(function() {
     }
     //break
 
-}
+})
