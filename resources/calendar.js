@@ -82,6 +82,13 @@ function calendarFunc() {
             let firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1)
             let dayOfWeek = firstDayOfMonth.getDay()
 
+            const outerDivSunday = document.getElementById('sunday')
+            const outerDivMonday = document.getElementById('monday')
+            const outerDivTuesday = document.getElementById('tuesday')
+            const outerDivWednesday = document.getElementById('wednesday')
+            const outerDivThursday = document.getElementById('thursday')
+            const outerDivFriday = document.getElementById('friday')
+            const outerDivSaturday = document.getElementById('saturday')
             switch (dayOfWeek) {
                 case 0:
                     monday.append('<div class="empty">' + '<br>')
@@ -122,31 +129,59 @@ function calendarFunc() {
 
                 switch (dayOfWeek) {
                     case 0:
-                        sunday.append('<div id="custom">' + i)
+                        let divSunday = document.createElement('div')
+                        divSunday.className = "BOX"
+                        divSunday.id = i + '_' + month + '_' + year
+                        divSunday.textContent = i
+                        outerDivSunday.appendChild(divSunday)
                         dayOfWeek++
                         break
                     case 1:
-                        monday.append('<div id="custom">' + i)
+                        let divMonday = document.createElement('div')
+                        divMonday.className = "BOX"
+                        divMonday.id = i + '_' + month + '_' + year
+                        divMonday.textContent = i
+                        outerDivMonday.appendChild(divMonday)
                         dayOfWeek++
                         break
                     case 2:
-                        tuesday.append('<div id="custom">' + i)
+                        let divTuesday = document.createElement('div')
+                        divTuesday.className = "BOX"
+                        divTuesday.id = i + '_' + month + '_' + year
+                        divTuesday.textContent = i
+                        outerDivTuesday.appendChild(divTuesday)
                         dayOfWeek++
                         break
                     case 3:
-                        wednesday.append('<div id="custom">' + i)
+                        let divWednesday = document.createElement('div')
+                        divWednesday.className = "BOX"
+                        divWednesday.id = i + '_' + month + '_' + year
+                        divWednesday.textContent = i
+                        outerDivWednesday.appendChild(divWednesday)
                         dayOfWeek++
                         break
                     case 4:
-                        thursday.append('<div id="custom">' + i)
+                        let divThursday = document.createElement('div')
+                        divThursday.className = "BOX"
+                        divThursday.id = i + '_' + month + '_' + year
+                        divThursday.textContent = i
+                        outerDivThursday.appendChild(divThursday)
                         dayOfWeek++
                         break
                     case 5:
-                        friday.append('<div id="custom">' + i)
+                        let divFriday = document.createElement('div')
+                        divFriday.className = "BOX"
+                        divFriday.id = i + '_' + month + '_' + year
+                        divFriday.textContent = i
+                        outerDivFriday.appendChild(divFriday)
                         dayOfWeek++
                         break
                     case 6:
-                        saturday.append('<div id="custom">' + i)
+                        let divSaturday = document.createElement('div')
+                        divSaturday.className = "BOX"
+                        divSaturday.id = i + '_' + month + '_' + year
+                        divSaturday.textContent = i
+                        outerDivSaturday.appendChild(divSaturday)
                         dayOfWeek = 0
                         break
                 }
