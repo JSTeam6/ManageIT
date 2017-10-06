@@ -31,7 +31,7 @@ $(function() {
                 task.assignedEmployees.push(employee);
                 ui.draggable.appendTo(`#${droppableId}`)
                 $(`#${droppableId}`).click(function() {
-                    $(".draggable").animate({
+                    $(`#${draggableId}`).animate({
                         height: 'toggle'
                     })
                 })

@@ -36,9 +36,12 @@ main {
     grid-row: 2 / 7;
 }
 
+
+
 .draggable,
 .droppable {
-    height: 15px;
+    /* height: 15px; */
+    cursor: -webkit-grab
 }
 
 .droppable .draggable {
