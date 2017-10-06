@@ -2,7 +2,9 @@
 
 * {
     /* temporary border */
-    /*border: solid 1px black;*/
+    border: solid 1px black;
+    /* margin: none;
+    padding: none; */
 }
 
 body {
@@ -38,8 +40,7 @@ main {
 
 
 
-.draggable,
-.droppable {
+.draggable {
     /* height: 15px; */
     cursor: -webkit-grab
 }
