@@ -35,24 +35,30 @@ main {
     grid-column: 1;
     grid-row: 2 / 7;
 }
-
-
-
+#archive div{
+    display: none;
+}
 .draggable,
 .droppable {
-    /* height: 15px; */
     cursor: -webkit-grab
 }
 
 .droppable .draggable {
     display: none;
+    margin-left: 20px;
 }
 
 #employees {
     grid-column: 6;
-    grid-row: 2 / 7;
+    grid-row: 2 / 5;
 }
-
+#archive{
+        grid-column: 6;
+        grid-row: 5;
+}
+#archive-image{
+    cursor: -webkit-grab;
+}
 #log {
     grid-column: 2 / 6;
     grid-row: 5/7;

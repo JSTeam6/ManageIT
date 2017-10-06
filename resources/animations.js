@@ -10,13 +10,20 @@ $(document).ready(function () {
             height: 'toggle'
         })
     })
+
+    $("#archive-image").droppable({ drop: Archive });
+
+    function Archive(event, ui) {
+        var draggableId = ui.draggable.attr("id");
+        let task = container.database.tasks.find(x => (x.taskName == `${draggableId}`))
+        task.taskStatus = "Archived";
+        $("#archive div").css("display", "block");
+        ui.draggable.appendTo(`#archive`)
+    }
+
+    $(`#archive-image`).click(function() {
+        $("#archive div").animate({
+           height: 'toggle'
+        })
+    })
 })
-
-$(".droppable").click(function(){
-    $(".draggable").slideToogle();
-});
-
-
-
-
-
