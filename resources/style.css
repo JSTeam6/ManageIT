@@ -2,7 +2,9 @@
 
 * {
     /* temporary border */
-    /*border: solid 1px black;*/
+    border: solid 1px black;
+    /* margin: none;
+    padding: none; */
 }
 
 body {
@@ -35,11 +37,19 @@ main {
     grid-column: 1;
     grid-row: 2 / 7;
 }
+<<<<<<< HEAD
 #archive div{
     display: none;
 }
 .draggable,
 .droppable {
+=======
+
+
+
+.draggable {
+    /* height: 15px; */
+>>>>>>> 983e971789e7e336eec097dd10924dc3ed6399de
     cursor: -webkit-grab
 }
 
