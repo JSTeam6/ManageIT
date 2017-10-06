@@ -1,13 +1,12 @@
-$(function () {
-    $('form').submit(function () {
+$(function() {
+    $('form').submit(function() {
         let formID = $(this)[0].id
         let formFieldValues = $(this).serializeArray()
         const log = $('#log')
         let commandResult
         try {
             commandResult = container.commandProcessor.processCommand(formID, formFieldValues)
-        }
-        catch (ex) {
+        } catch (ex) {
             commandResult = ex
         }
 
@@ -17,41 +16,39 @@ $(function () {
                 id: `${commandResult[1].name}`,
                 class: "droppable",
                 text: `${commandResult[1].name} [${commandResult[1].qualificationLevel}]`
-            }).droppable({accept: ".draggable"});
+            }).droppable({ accept: ".draggable" });
             $employee.appendTo("#employees");
             //makes it droppable
             $('.droppable').droppable({ drop: Drop });
-            
-            function Drop(event, ui) {
-              var draggableId = ui.draggable.attr("id");
-              var droppableId = $(this).attr("id");
-              let employee = container.database.employees.find(x => (x.name == `${droppableId}`))
-              let task = container.database.tasks.find(x => (x.taskName == `${draggableId}`))
-              employee.assignedTasks.push(task);
-              task.taskStatus= "Ongoing";
-              task.assignedEmployees.push(employee);
-              ui.draggable.appendTo(`#${droppableId}`)
-              $(`#${droppableId}`).click(function () {
-                $(".draggable").animate({
-                    height: 'toggle'
-                })
-            })
 
-        }
+            function Drop(event, ui) {
+                var draggableId = ui.draggable.attr("id");
+                var droppableId = $(this).attr("id");
+                let employee = container.database.employees.find(x => (x.name == `${droppableId}`))
+                let task = container.database.tasks.find(x => (x.taskName == `${draggableId}`))
+                employee.assignedTasks.push(task);
+                task.taskStatus = "Ongoing";
+                task.assignedEmployees.push(employee);
+                ui.draggable.appendTo(`#${droppableId}`)
+                $(`#${droppableId}`).click(function() {
+                    $(".draggable").animate({
+                        height: 'toggle'
+                    })
+                })
+
+            }
 
         } else if (commandResult[1].hasOwnProperty('taskName')) {
             let $task = $('<div/>', {
                 id: `${commandResult[1].taskName}`,
                 class: "draggable",
                 text: `${commandResult[1].taskName} [${commandResult[1].taskPriority}]`
-            }).draggable({revert:"invalid", helper:"clone"});
+            }).draggable({ revert: "invalid", helper: "clone" });
             $task.appendTo("#tasks");
             //makes it draggable
-            $( ".draggable" ).draggable({revert:"invalid", helper:"clone"});
+            $(".draggable").draggable({ revert: "invalid", helper: "clone" });
         }
 
-        
-        
         //$(".draggable")[0].reset()
 
         $(`#${formID}`)[0].reset()
