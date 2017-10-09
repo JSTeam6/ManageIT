@@ -1,2 +1,4 @@
 # ManageIT
 Task Management Single-Page App
+ManageIT was developed as a team effort by Georgi Spasov, Svetlin Stoykov and Zlatan Angelov. The application aims at providing a tool for effective task distribution among the members of an IT or any other team. For that purpose there is the possibility for task an employee selection. Task are created with the idea of deadlines in mind. In order to keep track of the deadlines distribution in a month time, the calendar feature has been placed on a central position and would mark the days having a certain dealine. Drag and drop functionality has been included for the easy transfer of tasks to an employee. Once tasks are being executed they could be archived for future reference.
+Hope you enjoy using it!

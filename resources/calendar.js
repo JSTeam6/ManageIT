@@ -57,9 +57,4 @@ const getCalendar = function () {
     }
 }
 
-<<<<<<< HEAD
-})
-=======
-$(document).ready(getCalendar()
-)
->>>>>>> 983e971789e7e336eec097dd10924dc3ed6399de
+$(document).ready(getCalendar())

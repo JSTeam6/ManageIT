@@ -17,8 +17,8 @@ $(document).ready(function () {
         var draggableId = ui.draggable.attr("id");
         let task = container.database.tasks.find(x => (x.taskName == `${draggableId}`))
         task.taskStatus = "Archived";
-        $("#archive div").css("display", "block");
         ui.draggable.appendTo(`#archive`)
+        //$("#archive div").css("display", "none");
     }
 
     $(`#archive-image`).click(function() {

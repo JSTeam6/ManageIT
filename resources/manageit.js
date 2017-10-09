@@ -29,8 +29,10 @@ $(function() {
                 employee.assignedTasks.push(task);
                 task.taskStatus = "Ongoing";
                 task.assignedEmployees.push(employee);
-                $(".droppable .draggable").css("display", "none");
+                
+                //$(".droppable .draggable").css("display", "none");
                 ui.draggable.appendTo(`#${droppableId}`)
+
                 $(`#${droppableId}`).click(function() {
                     $(`#${droppableId} div`).animate({
                         height: 'toggle'

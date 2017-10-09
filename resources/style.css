@@ -2,7 +2,7 @@
 
 * {
     /* temporary border */
-    border: solid 1px black;
+    /*border: solid 1px black;*/
     /* margin: none;
     padding: none; */
 }
@@ -27,37 +27,25 @@ header {
     grid-column: 3 / 4;
     grid-row: 1;
 }
-
 main {
     grid-column: 2 / 6;
     grid-row: 2 / 5;
 }
-
 #tasks {
     grid-column: 1;
     grid-row: 2 / 7;
 }
-<<<<<<< HEAD
 #archive div{
     display: none;
 }
-.draggable,
-.droppable {
-=======
-
-
-
 .draggable {
     /* height: 15px; */
->>>>>>> 983e971789e7e336eec097dd10924dc3ed6399de
     cursor: -webkit-grab
 }
-
 .droppable .draggable {
-    display: none;
     margin-left: 20px;
+    display: none;
 }
-
 #employees {
     grid-column: 6;
     grid-row: 2 / 5;
