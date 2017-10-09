@@ -1,5 +1,5 @@
-$(function() {
-    $('form').submit(function() {
+$(function () {
+    $('form').submit(function () {
         let formID = $(this)[0].id
         let formFieldValues = $(this).serializeArray()
         const log = $('#log')
@@ -29,18 +29,14 @@ $(function() {
                 employee.assignedTasks.push(task);
                 task.taskStatus = "Ongoing";
                 task.assignedEmployees.push(employee);
-                
-                //$(".droppable .draggable").css("display", "none");
-                ui.draggable.appendTo(`#${droppableId}`)
 
-                $(`#${droppableId}`).click(function() {
+                ui.draggable.appendTo(`#${droppableId}`)
+                $(`#${droppableId}`).click(function () {
                     $(`#${droppableId} div`).animate({
                         height: 'toggle'
                     })
                 })
-
             }
-
         } else if (commandResult[1].hasOwnProperty('taskName')) {
             let $task = $('<div/>', {
                 id: `${commandResult[1].taskName}`,
@@ -51,8 +47,6 @@ $(function() {
             //makes it draggable
             $(".draggable").draggable({ revert: "invalid", helper: "clone" });
         }
-
-        //$(".draggable")[0].reset()
 
         $(`#${formID}`)[0].reset()
 

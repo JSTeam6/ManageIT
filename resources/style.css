@@ -1,28 +1,16 @@
-/*Light Green Materail Color Sheme https://material.io/guidelines/style/color.html#color-color-palette */
-
-* {
-    /* temporary border */
-    /*border: solid 1px black;*/
-    /* margin: none;
-    padding: none; */
-}
-
 body {
     background: #F1F8E9;
     display: grid;
 }
-
 header {
     grid-column: 1 / 7;
     grid-row: 1;
     display: grid;
 }
-
 #logo {
     height: 70px;
     width: 90px;
 }
-
 #login {
     grid-column: 3 / 4;
     grid-row: 1;
@@ -39,7 +27,6 @@ main {
     display: none;
 }
 .draggable {
-    /* height: 15px; */
     cursor: -webkit-grab
 }
 .droppable .draggable {
@@ -63,11 +50,9 @@ main {
     overflow-y: scroll;
     height: 250px;
 }
-
 #createEmployeeForm {
     display: none;
 }
-
 #createTaskForm {
     display: none;
 }

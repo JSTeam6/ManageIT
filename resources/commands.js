@@ -10,7 +10,6 @@ const commandsFunc = function (modelFactory, database) {
             const canManage = parameters.find(p => p.name == 'canManage') ? parameters[3].value : false
             const available = parameters.find(p => p.name == 'available') ? (parameters.find(p => p.name == 'canManage') ? parameters[4].value : parameters[3].value) : false
             const assignedTasks = []
-
             const employee = modelFactory.createEmployee(name, password, qualificationLevel, canManage, available, assignedTasks)
             database.employees.push(employee)
 
@@ -32,11 +31,8 @@ const commandsFunc = function (modelFactory, database) {
             const deadLine = parameters[4].value
             const taskComment = parameters.find(p => p.name == 'taskComment') ? parameters[5].value : ''
             const assignedEmployees = []
-
             const task = modelFactory.createTask(taskName, taskPriority, taskDifficulty, taskStatus, deadLine, taskComment, assignedEmployees)
             database.tasks.push(task)
-
-            //$task.draggable({revert: "invalid"})
             
             let successMessage = `Task with ID: ${database.tasks.length - 1} and Name: ${task.taskName} was created.`
 

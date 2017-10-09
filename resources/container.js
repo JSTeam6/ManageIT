@@ -3,10 +3,9 @@ const container = (function () {
     const database = createDatabase()
     const commands = commandsFunc(modelFactory, database)
     const commandProcessor = commandProcessorFunc(commands)
-    
+
     return {
         commandProcessor,
         database
-        //TODO: hide the database!!!!!!!!!!!!!!!!!!!!!
     }
 }())

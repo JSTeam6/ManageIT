@@ -18,12 +18,11 @@ $(document).ready(function () {
         let task = container.database.tasks.find(x => (x.taskName == `${draggableId}`))
         task.taskStatus = "Archived";
         ui.draggable.appendTo(`#archive`)
-        //$("#archive div").css("display", "none");
     }
 
-    $(`#archive-image`).click(function() {
+    $(`#archive-image`).click(function () {
         $("#archive div").animate({
-           height: 'toggle'
+            height: 'toggle'
         })
     })
 })
